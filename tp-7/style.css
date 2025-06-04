@@ -1,0 +1,9 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card.footeer{
+    font-size: 15px;
+}
+.accordion-button:focus{
+    box-shadow: none;
+}
