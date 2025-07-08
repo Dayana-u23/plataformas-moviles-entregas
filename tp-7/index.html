@@ -1,206 +1,168 @@
-<!DOCTYPE html>
-<html>
+ 
+ <!DOCTYPE html>
+<html lang="es">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>TP-7: Funciones en JavaScript</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Walking Dead | Fan Page</title>
+ <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body>
-<p>Completar con la implementación de las funciones correspondientes</p>
-<script type="text/javascript">
-// Numeros
+<body class="bg-dark text-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="louis.jpg" class="rounded-circle" alt="Usuario" width="30" height="30"> Usuario
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Personajes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Decisiones</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+       <div class="carousel-item active">
+      <img src="ban.jpg" class="d-block w-100" style="height: 350px; object-fit: cover;" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="ban.jpg" class="d-block w-100" style="height: 350px; object-fit: cover;" alt="...">
+    </div>
+    <div class="carousel-item">
+       <img src="ban.jpg" class="d-block w-100" style="height: 350px; object-fit: cover;" alt="...">
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  <div class="text-center my-5">
+    <h1 class="display-4">The Walking Dead: The Game</h1>
+    <p class="lead">Una historia de supervivencia, decisiones y emociones intensas</p>
+  </div>
 
-// 1- Implementar una función "suma" que retorne la suma de 2 numeros
-// ejemplo: suma(2,3) retorna 5
-function suma(num1, num2) {
-     return num1 + num2;
-}
+  <div class="container mb-5">
+    <p>*The Walking Dead: The Game* es una serie interactiva de Telltale Games que sigue las vidas de Lee Everett y Clementine. Ambientada en un mundo postapocalíptico, la historia combina tensión, dilemas morales y vínculos emocionales.</p>
+    <p>Las decisiones del jugador influyen en el desarrollo de la narrativa, generando una experiencia única en cada partida. Desde proteger a Clementine hasta enfrentarse a grupos hostiles, cada acción importa.</p>
+  </div>
 
-console.log("Resultados de suma():")
-console.log(suma(2,3)); // 5
-console.log(suma(4,4)); // 8
-console.log(suma(-10,10)); // 0
+<div class="container mb-5">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+    <div class="col">
+      <div class="card bg-secondary text-white">
+        <img src="clementine.jpg" class="card-img-top" alt="Clementine">
+        <div class="card-body">
+          <h5 class="card-title">Clementine</h5>
+          <p class="card-text">Clementine es una niña tranquila y reflexiva, con dos padres atentos y cariñosos.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-secondary text-white">
+        <img src="lee.jpg" class="card-img-top" alt="Lee">
+        <div class="card-body">
+          <h5 class="card-title">Lee Everett</h5>
+          <p class="card-text">Un hombre con pasado oscuro que se convierte en figura paterna de Clementine.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-secondary text-white">
+        <img src="desiciones.jpg" class="card-img-top" alt="Decisiones">
+        <div class="card-body">
+          <h5 class="card-title">Decisiones</h5>
+          <p class="card-text">¿Salvarás a un amigo o a otro amigo?. Cada elección define el transcurso de tu historia.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-secondary text-white">
+        <img src="zombies.jpg" class="card-img-top" alt="Zombis">
+        <div class="card-body">
+          <h5 class="card-title">Zombis</h5>
+          <p class="card-text">El peligro está en cada esquina. Cuidado con el próximo paso, podría ser el último.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="container mb-5">
+    <h3 class="mb-3">FAQ</h3>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item bg-dark text-light">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button collapsed bg-secondary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            ¿Quién es Clementine?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Es una niña que crece durante el apocalipsis, convirtiéndose en uno de los personajes más icónicos del juego.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-dark text-light">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed bg-secondary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            ¿Las decisiones cambian la historia?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Sí. Tus decisiones afectan quién vive, quién muere y cómo se desarrolla la narrativa.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-dark text-light">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed bg-secondary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            ¿Está basado en la serie de TV?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Está basado en el cómic original de The Walking Dead, pero con historia y personajes originales.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <h3 class="mt-5">Formulario de contacto</h3>
+    <form>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo" placeholder="tu email">
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe tu mensaje..."></textarea>
+      </div>
+<div class="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-end">
+  <button type="reset" class="btn btn-secondary me-sm-2 mb-2 mb-sm-0">Limpiar</button>
+  <button type="submit" class="btn btn-danger">Enviar</button>
+</div>
 
-
-// 2- Implementar una función "elevarAlCubo" que eleve al cubo un numero
-// ejemplo: elevarAlCubo(3) retorna 27
-
-const elevarAlCubo=(num)=>num**3;
-
-console.log("Resultados de elevarAlCubo():")
-console.log(elevarAlCubo(3)); // 27
-console.log(elevarAlCubo(99)); // 970299
-
-
-// 3- Implementar una función "restoDivisionEntera" para devolver el resto de una división entera entre un dividendo y un divisor
-// ejemplo: restoDivisionEntera(3,2) retorna 1
-function restoDivisionEntera(dividendo,divisor){
-	return dividendo % divisor;
-}
-
-console.log("Resultados de restoDivisionEntera():")
-console.log(restoDivisionEntera(1,3)); // 1
-console.log(restoDivisionEntera(2,3)); // 2
-console.log(restoDivisionEntera(3,3)); // 0
-console.log(restoDivisionEntera(4,3)); // 1
-
-
-// 4- Implementar una función "numeroPi" para devolver el numero PI
-// ejemplo: numeroPi() retorna 3,14...
-
-const numeroPi=() =>Math.PI;
-
-console.log("Resultado de numeroPi():")
-console.log(numeroPi())
-
-
-// 5- Implementar una función "numeroRandom" para devolver un número random (aleatorio)
-// ejemplo: numeroRandom() retorna 0,123...
-
-const numeroRandom=()=>Math.random;
-
-console.log("Resultados de numeroRandom():")
-console.log(numeroRandom())
-console.log(numeroRandom())
-console.log(numeroRandom())
-
-
-// 6- Implementar una función "numeroRandomDesdeHasta" para devolver un número random entre 2 valores recibidos como parámetros
-// ejemplo: numeroRandomDesdeHasta(1,6) retorna 3
-
-function numeroRandomDesdeHasta(min,max){
-	return Math.floor(Math.random()*(max-min+1))+min;
-}
-
-console.log("Resultados de numeroRandomDesdeHasta():")
-console.log(numeroRandomDesdeHasta(1,6))
-console.log(numeroRandomDesdeHasta(2,5))
-console.log(numeroRandomDesdeHasta(3,4))
-
-
-// 7- Implementar una función "esPar" que reciba un número como parámetro y devuelva verdadero si el número es par, o falso si es impar
-// ejemplo: esPar(4) retorna true, esPar(5) retorna false
-
-const esPar=function(num){
-	return num%2 ===0;
-};
-
-console.log("Resultados de esPar():")
-console.log(esPar(4)); // true
-console.log(esPar(5)); // false
-console.log(esPar(0)); // true
-console.log(esPar(-2)); // true
-
-
-// 8- Implementar una función "esPositivo" que reciba un número y devuelva true si el número es positivo, o false si es negativo o cero
-// ejemplo: esPositivo(4) retorna true, esPositivo(-3) retorna false
-
-const esPositivo=(num)=>0;
-
-console.log("Resultados de esPositivo():")
-console.log(esPositivo(4)); // true
-console.log(esPositivo(-3)); // false
-console.log(esPositivo(0)); // false
-
-// 9- Implementar una función "clasificarNumero" que reciba un número y retorne un mensaje indicando si el número es par o impar, y si es positivo o negativo
-// ejemplo: clasificarNumero(4) retorna "El número 4 es par y positivo."
-// ejemplo: clasificarNumero(-3) retorna "El número -3 es impar y negativo."
-
-function clasificarNumero(num){
-	const paridad=esPar(num)? "par":"impar";
-	let signo;
-	if(num>0){
-		signo="positivo";
-	} else if(num<0){
-		signo="negativo";
-	} else {
-		signo="no positivo";
-	}
-	return 'El numero ${num} es ${paridad} y ${signo}.';
-}
-
-console.log("Resultados de clasificarNumero():")
-console.log(clasificarNumero(4)); // "El número 4 es par y positivo."
-console.log(clasificarNumero(-3)); // "El número -3 es impar y negativo."
-console.log(clasificarNumero(0)); // "El número 0 es par y no positivo."
-
-// Cadenas de Caracteres
-
-// 10- Implementar una función "transformarMayuscula" que transforme a mayúscula la cadena de caracteres recibida como parámetro
-// ejemplo: transformarMayuscula("Plataformas Móviles") retorna "PLATAFORMAS MÓVILES"
-
-const transformarMayuscula=function(cadena){
-	return cadena.toUpperCase();
-};
-
-console.log("Resultados de transformarMayuscula():")
-console.log(transformarMayuscula("Plataformas Móviles"))
-console.log(transformarMayuscula("hola mundo"))
-console.log(transformarMayuscula("abc"))
-
-
-// 11- Implementar una función "primeraLetra" que nos devuelva la inicial de la cadena de caracteres recibida como parámetro
-// ejemplo: primeraLetra("Plataformas") retorna "P"
-
-const primeraLetra=(cadena)=>cadena.charAt(0);
-
-console.log("Resultados de primeraLetra():")
-console.log(primeraLetra("Plataformas Móviles"))
-console.log(primeraLetra("hola mundo"))
-console.log(primeraLetra("abc"))
-
-
-// 12- Implementar una función "sinPrimeraLetra" que nos devuelva la cadena de caracteres recibida como parámetro sin la primera letra
-// ejemplo: sinPrimeraLetra("Plataformas") retorna "lataformas"
-
-function sinPrimeraLetra(cadena){
-	return cadena.slice(1);
-}
-
-console.log("Resultados de sinPrimeraLetra():")
-console.log(sinPrimeraLetra("Plataformas Móviles"))
-console.log(sinPrimeraLetra("hola mundo"))
-console.log(sinPrimeraLetra("abc"))
-
-
-// 13- Implementar una función "primeraLetraMayuscula" que devuelve la cadena de caracteres recibida, pero  con su primera letra en mayúscula
-// ejemplo: primeraLetraMayuscula("plataformas") retorna "Plataformas"
-
-const primeraLetraMayuscula =(cadena)=>
-cadena.charAt(0).toUpperCase()+cadena.slice(1);
-
-
-console.log("Resultados de primeraLetraMayuscula():")
-console.log(primeraLetraMayuscula("plataformas móviles"))
-console.log(primeraLetraMayuscula("hola mundo"))
-console.log(primeraLetraMayuscula("abc"))
-
-
-// 14- Implementar una función "terminaCon" que devuelve verdadero o falso si la palabra termina con la terminación recibida
-// ejemplo: terminaCon("plataformas", "mas") retorna true
-
-const terminaCon=function(palabra,terminacion){
-	return palabra.endsWith(terminacion)
-};
-
-console.log("Resultados de terminaCon():")
-console.log(terminaCon("hola", "a")); // true
-console.log(terminaCon("hola", "o")); // false
-console.log(terminaCon("plataformas", "mas")); // true
-console.log(terminaCon("plataformas", "más")); // false
-
-// 15- Implementar una función "palabraInvertida" que devuelva la palabra invertida
-// ejemplo: palabraInvertida("hola") retorna "aloh";
-
-function palabraInvertida(cadena){
-	return cadena.split(").reverse().join(");
-}
-
-console.log("Resultados de palabraInvertida():")
-console.log(palabraInvertida("plataformas móviles"))
-console.log(palabraInvertida("hola mundo"))
-console.log(palabraInvertida("abc"))
-
-</script>
+   <footer class="bg-black text-center text-secondary py-3 mt-5">
+  <div class="container-fluid d-flex justify-content-between">
+    <span>    Plataforma TWD </span>
+    <span>Fan © 2025</span>
+  </div>
+</footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
