@@ -1,93 +1,136 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
   <title>Ejercicios</title>
   <style>
     body {
-      background-color: #e8f5e9; 
+      background: linear-gradient(to right, #e8f5e9, #f1f8e9);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
     }
 
-    .conteiner {
-      background-color: #a5d6a7; 
+    .container {
+      background-color: #c8e6c9;
       text-align: center;
-      width: 600px;
-      border-radius: 12px;
-      padding: 30px 20px;
-      margin: 50px auto;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 600px;
+      border-radius: 20px;
+      padding: 40px 30px;
+      margin: 60px auto;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      position: relative;
     }
 
     h1 {
-      color: #1b5e20;
-      margin-bottom: 30px;
+      color: #2e7d32;
+      margin-bottom: 40px;
+      font-size: 32px;
     }
 
     .ejercicios {
       margin-bottom: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .ejercicios:hover {
+      transform: scale(1.03);
     }
 
     .ejercicios a {
-      color: #2e7d32;
+      color: #1b5e20;
       text-decoration: none;
-      font-size: 20px;
-      transition: color 0.3s ease;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 10px 20px;
+      display: inline-block;
+      border-radius: 12px;
+      background-color: #a5d6a7;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, color 0.3s;
     }
 
     .ejercicios a:hover {
-      color: #1b5e20;
-    }
-
-    .ejercicios a:active {
-      color: #388e3c;
+      background-color: #81c784;
+      color: #ffffff;
     }
 
     .bordes {
-      border-bottom: 1px solid #c8e6c9;
-      width: 80%;
-      margin: 10px auto;
+      border-bottom: 2px dashed #aed581;
+      width: 70%;
+      margin: 15px auto;
+    }
+
+    .leaf {
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      font-size: 50px;
+      transform: rotate(-20deg);
+      opacity: 0.2;
+    }
+
+    .flower {
+      position: absolute;
+      bottom: -25px;
+      right: -25px;
+      font-size: 40px;
+      transform: rotate(10deg);
+      opacity: 0.2;
     }
   </style>
 </head>
 <body>
-  <div class="conteiner">
-    <h1>Ejercicios</h1> 
-    <div class="ejercicios">
-      <h2><a href="tp-1/ejercicio1.html">Ejercicio 1</a></h2>
-      <div class="bordes"></div>
-    </div>
+  <div class="container">
+    <div class="leaf">🍃</div>
+    <h1>🌿 Entregas de Ejercicios 🌿</h1> 
 
     <div class="ejercicios">
-      <h2><a href="tp-2/index.html">Ejercicio 2</a></h2>
+      <a href="tp-1/ejercicio1.html"> Ejercicio 1</a>
       <div class="bordes"></div>
     </div>
 
     <div class="ejercicios">
-      <h2><a href="tp-3/index.html">Ejercicio 3</a></h2>
+      <a href="tp-2/index.html"> Ejercicio 2</a>
       <div class="bordes"></div>
     </div>
 
     <div class="ejercicios">
-      <h2><a href="tp-4/index.html">Ejercicio 4</a></h2>
+      <a href="tp-3/index.html"> Ejercicio 3</a>
+    </div>
+
+    <div class="ejercicios">
+      <a href="tp-4/index.html">Ejercicio 4</a>
       <div class="bordes"></div>
     </div>
 
-       <div class="ejercicios">
-      <h2><a href="tp-5/index.html">Ejercicio 5</a></h2>
-      <div class="bordes"></div>
-
-             <div class="ejercicios">
-      <h2><a href="tp-6/index.html">Ejercicio 6</a></h2>
+    <div class="ejercicios">
+      <a href="tp-5/index.html"> Ejercicio 5</a>
       <div class="bordes"></div>
     </div>
 
-             <div class="ejercicios">
-      <h2><a href="tp-7/index.html">Ejercicio 7</a></h2>
+    <div class="ejercicios">
+      <a href="tp-6/index.html"> Ejercicio 6</a>
       <div class="bordes"></div>
     </div>
+
+    <div class="ejercicios">
+      <a href="tp-7/index.html"> Ejercicio 7</a>
+      <div class="bordes"></div>
     </div>
 
-  
+    <div class="ejercicios">
+      <a href="tp-8/index.html"> Ejercicio 8</a>
+      <div class="bordes"></div>
+    </div>
+
+    <div class="ejercicios">
+      <a href="tp-9/index.html"> Ejercicio 9</a>
+      <div class="bordes"></div>
+    </div>
+
+    <div class="flower">🌸</div>
+  </div>
 </body>
 </html>
