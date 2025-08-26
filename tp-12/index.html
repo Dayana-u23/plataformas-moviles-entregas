@@ -12,29 +12,51 @@
         <div class="card">
             <div class="card-body">
                 <h2>Texto</h2>
-
                 <p class="texto" id="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum auctor libero, vel imperdiet est. Etiam blandit facilisis ex, nec cursus metus pharetra quis. Fusce imperdiet nisl nibh, ac aliquet ante elementum vitae.</p>
 
                 <hr class="hr">
 
                 <h2>Opciones de Formato</h2>
                 <div class="row">
-                    <div class="col-12 col-md-4 my-1">
+                    <div class="col-12 col-md-3 my-1">
                         <button id="btn-negrita" class="btn d-block w-100 btn-primary" data-formato="negrita">
                             Bold (Negrita)
                         </button>
                     </div>
-                    <div class="col-12 col-md-4 my-1">
+                    <div class="col-12 col-md-3 my-1">
                         <button id="btn-cursiva" class="btn d-block w-100 btn-primary" data-formato="cursiva">
                             Italic (Cursiva)
                         </button>
                     </div>
-                    <div class="col-12 col-md-4 my-1">
+                    <div class="col-12 col-md-3 my-1">
                         <button id="btn-subrayado" class="btn d-block w-100 btn-primary" data-formato="subrayado">
                             Underline (Subrayado)
                         </button>
                     </div>
+
+                    <div class="col-12 col-md-3 my-1">
+                        <button id="btn-color" class="btn d-block w-100 btn-primary" data-formato="color">
+                            Color (Rojo)
+                        </button>
+                    </div>
                 </div>
+
+                <hr>
+
+      
+                <h2>Editar Texto</h2>
+                <input type="text" id="input-texto" class="form-control" placeholder="Escribe aquí para cambiar el texto...">
+
+                <hr>
+
+   
+                <h2>Tamaño de Texto</h2>
+                <select id="select-tamano" class="form-select">
+                    <option value="14px">Pequeño</option>
+                    <option value="18px" selected>Normal</option>
+                    <option value="24px">Grande</option>
+                    <option value="32px">Muy Grande</option>
+                </select>
             </div>
         </div>
     </div>
@@ -45,6 +67,7 @@
         const inputTexto = document.getElementById('input-texto');
         const selectTamano = document.getElementById('select-tamano');
 
+      
         let estadoNegrita = false;
         let estadoCursiva = false;
         let estadoSubrayado = false;
@@ -94,7 +117,7 @@
             actualizarBotones();
         }
 
-        // Nueva función para color
+        // Nueva función: color
         function funcionColor() {
             estadoColor = !estadoColor;
             actualizarEstilos();
@@ -120,13 +143,9 @@
             }
         }
         document.querySelectorAll('button.btn').forEach(e => e.addEventListener('click', handlerBoton));
-
-        // Input para editar el texto
         inputTexto.addEventListener('input', () => {
             texto.textContent = inputTexto.value;
         });
-
-        // Selector para cambiar tamaño del texto
         selectTamano.addEventListener('change', () => {
             texto.style.fontSize = selectTamano.value;
         });
